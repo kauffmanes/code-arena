@@ -1,0 +1,163 @@
+@import './reset.css';
+@import '../node_modules/codemirror/lib/codemirror.css';
+/* @import '../node_modules/codemirror/theme/erlang-dark.css'; */
+@import '../node_modules/codemirror/theme/mdn-like.css';
+
+/* #273b44 */
+:root {
+  --primary: #183654;
+  --primary-light: #ddd;
+  --secondary-dark: #4fa5a2;
+  --primary-text: color: #383838;
+  --classic: rgba(0,0,0,.1);
+  --primary-accent: #4891da;
+  --secondary-accent: #c0ccd8;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--primary-text);
+}
+
+textarea {
+  word-wrap: break-word;
+}
+
+.app {
+  height: 100vh;
+}
+
+header {
+  background: var(--primary);
+  padding: 0 24px;
+  height: 6vh;
+  line-height: 6vh;
+}
+
+/*** fonts ***/
+h1, h2, h3 {
+  font-family: 'Do Hyeon', serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6em;
+  color: var(--primary-light);
+}
+
+.landing {
+  display: flex;
+}
+
+.arena {
+  height: 94vh;
+  flex: 6
+}
+
+.arena-mirror, .CodeMirror {
+  height: 100%;
+  font-size: 1.2em;
+}
+
+.chat-container {
+  flex: 2;
+  border-left: solid 5px rgba(0,0,0,.1);
+  z-index: 1;
+  position: relative;
+  height: 94vh;
+  /* max-width: 500px; */
+  
+}
+
+.chat-container .btn-set {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.chat-container .btn-set button {
+  width: 100%;
+  border: none;
+  color: #fff;
+  height: 5vh;
+  line-height: 5vh;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.chat-container .btn-set button.leave {
+  background: #cc0000;
+}
+
+.chat-container .btn-set button.join {
+  background: var(--primary-accent);
+}
+
+.chat-container h2 {
+  font-size: 1.2em;
+  width: 100%;
+  background: var(--secondary-accent);
+  height: 5vh;
+  line-height: 5vh;
+  padding: 0 12px;
+  border-bottom: solid 1px rgba(0,0,0,.2);
+}
+
+.chat-container textarea {
+  width: 100%;
+  border: none;
+  border-top: solid 1px var(--classic);
+  background: rgba(0,0,0,.025);
+  height: 10vh;
+  padding: 12px;
+  font-size: 1.2em;
+}
+
+.chat-container ul {
+  max-height: 74vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.chat-container ul li div {
+  margin: 12px;
+}
+
+.chat-container ul li span {
+  padding: 6px 12px;
+  background: var(--classic);
+  display: inline-block;
+  margin: 6px 0;
+  border-radius: 12px;
+  line-height: 150%;
+  max-width: 85%;
+}
+
+.chat-container ul li div.me {
+  text-align: right;
+}
+.chat-container ul li div.me span {
+  background: var(--primary-accent);
+  color: #fff;
+}
+
+.chat-container small {
+  font-size: .9em;
+  color: rgba(0,0,0,.5);
+}
+
+.sidebar {
+  flex: 1;
+  background: #1b1b1b;
+}

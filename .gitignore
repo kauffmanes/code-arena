@@ -1,0 +1,7 @@
+node_modules
+public/bundle.js
+.idea
+.vscode
+*.map
+*.bundle.js
+.DS_Store
