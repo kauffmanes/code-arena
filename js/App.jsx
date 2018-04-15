@@ -14,6 +14,8 @@ const App = () => (
             <Header></Header>
             <Switch>
                 <Route exact path='/' component={Landing} />
+                <Route exact path='/arena' component={Landing} />
+                <Route path='/arena/:arena' component={Landing} />
                 <Route path='/test' component={Test} />
                 <Route component={FourOhFour} />
             </Switch>

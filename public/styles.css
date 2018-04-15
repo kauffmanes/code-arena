@@ -6,6 +6,7 @@
 /* #273b44 */
 :root {
   --primary: #183654;
+  --primary-dark: #11263b;
   --primary-light: #ddd;
   --secondary-dark: #4fa5a2;
   --primary-text: color: #383838;
@@ -40,6 +41,7 @@ header {
   padding: 0 24px;
   height: 6vh;
   line-height: 6vh;
+  color: var(--primary-light);
 }
 
 /*** fonts ***/
@@ -51,6 +53,75 @@ h1 {
   margin: 0;
   font-size: 1.6em;
   color: var(--primary-light);
+  display: inline-block;
+}
+
+header > div {
+  position: absolute;
+  right: 12px;
+  top: 6px;
+}
+
+header > div:hover svg {
+  cursor: pointer;
+  color: #bbb;
+  transform: rotate(10deg);
+}
+
+header div:hover div.options {
+  display: block;
+}
+
+header div.options {
+  position: absolute;
+  z-index: 2;
+  right: 56px;
+  background: var(--primary-dark);
+  top: -6px;
+  padding: 0 24px;
+  height: 6vh;
+  display: none;
+  width: max-content;
+  width: -moz-max-content;
+}
+
+header li {
+  display: inline-block;
+  /* height: 4vh;
+  margin: 1vh 0; */
+}
+
+header button {
+  height: 4vh;
+  border: none;
+  padding: 0 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: inherit;
+  color: white;
+  letter-spacing: .025em;
+  margin: 0 3px;
+}
+
+header button:hover {
+  background: black;
+  cursor: pointer;
+}
+
+.btn-danger {
+  border: solid 1px #eee;
+}
+
+/* .btn-secondary {
+  background: black;
+} */
+
+.btn-primary {
+  background: orangered;
+}
+
+.btn-primary:hover {
+  background: #bf3400;
 }
 
 .landing {

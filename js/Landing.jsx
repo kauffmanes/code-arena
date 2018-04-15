@@ -9,11 +9,41 @@ class Arena extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: ""
+            value: "",
+            arenaId: props.arena || null
         };
-
-        get
     }
+
+    componentWillMount () {
+
+        //check the URL - if an arena ID is present, request that data. if not, create a new random ID
+        if (this.state.arenaId) {
+            //service call
+            const arenaData = {
+                header: "",
+                data: {
+                    _id: "1",
+                    codeString: "--module(my_module). " + this.state.arenaId
+                }
+            };
+
+            //make service call and save as str
+            this.setState({ value: arenaData.data.codeString });
+        }
+
+    }
+
+    //save to the database
+    save () {}
+
+    //reset button (get's the last saved from db)
+    reset() {}
+
+    //new fresh one
+    createNew () {}
+
+    //delete
+    deleteArena() {}
 
     render() {
         return (
@@ -29,7 +59,7 @@ class Arena extends React.Component {
                         lineWrapping: true
                     }}
                     onChange={(editor, data, value) => {
-                        
+                        //make socket call
                     }}>
                 </CodeMirror>
             </div>
@@ -143,9 +173,9 @@ class ChatContainer extends React.Component {
     }
 }
 
-const Landing = () => (
+const Landing = (props) => (
     <div className="landing">
-        <Arena></Arena>
+        <Arena arena={props.match.params.arena}></Arena>
         <ChatContainer></ChatContainer>
     </div>
 );
