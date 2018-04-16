@@ -58,7 +58,7 @@ h1 {
 
 header > div {
   position: absolute;
-  right: 12px;
+  right: 0;
   top: 6px;
 }
 
@@ -72,15 +72,25 @@ header div:hover div.options {
   display: block;
 }
 
+.share {
+  padding: 12px;
+  background: orangered;
+  color: white;
+}
+
+.share span {
+  font-weight: bold;
+}
+
 header div.options {
   position: absolute;
   z-index: 2;
-  right: 56px;
+  right: 0px;
   background: var(--primary-dark);
   top: -6px;
   padding: 0 24px;
   height: 6vh;
-  display: none;
+  /* display: none; */
   width: max-content;
   width: -moz-max-content;
 }
@@ -91,19 +101,19 @@ header li {
   margin: 1vh 0; */
 }
 
-header button {
+button {
   height: 4vh;
   border: none;
   padding: 0 18px;
   font-weight: bold;
   text-transform: uppercase;
-  background: inherit;
+  background: black;
   color: white;
   letter-spacing: .025em;
   margin: 0 3px;
 }
 
-header button:hover {
+button:hover {
   background: black;
   cursor: pointer;
 }
