@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {UnControlled as CodeMirror } from 'react-codemirror2';
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+global.jQuery = $;
 
 require('codemirror/mode/erlang/erlang');
 
@@ -14,23 +18,24 @@ class Arena extends React.Component {
         };
     }
 
-    componentWillMount () {
+    componentDidMount () {
 
         //check the URL - if an arena ID is present, request that data. if not, create a new random ID
         if (this.state.arenaId) {
-            //service call
-            const arenaData = {
-                header: "",
-                data: {
-                    _id: "1",
-                    codeString: "--module(my_module). " + this.state.arenaId
-                }
-            };
+            
+            var url = "http://localhost:4000/api/arena/" + this.state.arenaId;
+            var self = this;
 
-            //make service call and save as str
-            this.setState({ value: arenaData.data.codeString });
+            $.ajax({
+                url: url,
+                method: "GET",
+            }).done(function(data) {
+                self.setState({value: data && data.codeString || ""});
+            })
+            .fail(function(err) {
+                console.debug(err);
+            });
         }
-
     }
 
     //save to the database
