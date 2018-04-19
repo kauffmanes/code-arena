@@ -74,8 +74,10 @@ header div:hover div.options {
 
 .share {
   padding: 12px;
-  background: orangered;
+  padding-top: 1vh;
+  background: #1d1d1d;
   color: white;
+  height: 6vh;
 }
 
 .share span {
@@ -90,15 +92,12 @@ header div.options {
   top: -6px;
   padding: 0 24px;
   height: 6vh;
-  /* display: none; */
   width: max-content;
   width: -moz-max-content;
 }
 
 header li {
   display: inline-block;
-  /* height: 4vh;
-  margin: 1vh 0; */
 }
 
 button {
@@ -107,24 +106,20 @@ button {
   padding: 0 18px;
   font-weight: bold;
   text-transform: uppercase;
-  background: black;
+  background: orangered;
   color: white;
   letter-spacing: .025em;
   margin: 0 3px;
 }
 
 button:hover {
-  background: black;
   cursor: pointer;
+  background: #cf3c05;
 }
 
 .btn-danger {
   border: solid 1px #eee;
 }
-
-/* .btn-secondary {
-  background: black;
-} */
 
 .btn-primary {
   background: orangered;
@@ -139,7 +134,7 @@ button:hover {
 }
 
 .arena {
-  height: 94vh;
+  height: 89vh;
   flex: 6
 }
 

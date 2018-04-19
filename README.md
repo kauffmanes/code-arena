@@ -1,6 +1,8 @@
-Name: CarrotCode
+Name: Code-Arena
 Description: A website that you can create live coding sessions to share with select people. 
 Purpose: To aid in programming classes when students can't see the board, or have accessibility concerns, or can't make it to class.
+
+THIS IS NOT UP TO DATE
 
 The web browser interacts only with the HTTP server and REST API.
 
@@ -11,7 +13,7 @@ The web browser interacts only with the HTTP server and REST API.
 2. Prof clicks a button that creates a new demo
 3. The page URI updates with the shareable demo ID
 
-REQUEST: GET http://www.carrot.com/
+REQUEST: GET http://www.domain.com/
 RESPONSE: 200 OK - /index.html
 
 ### Summary:
