@@ -174,10 +174,10 @@ class Arena extends React.Component {
                 <div className="share">
                     <button onClick={this.save}>Save</button>
                     <button disabled={!this.state.revisionId} onClick={this.deleteArena}>Delete</button>
-                    <button onClick={this.watch}>Watch</button>
-                    <button onClick={this.stopWatching}>Stop Watching</button>
-                    <button onClick={this.stream}>Stream</button>
-                    <button onClick={this.stopStreaming}>Stop Streaming</button>
+                    <button className={this.state.subscriberId ? "hidden" : "show"} onClick={this.watch}>Watch</button>
+                    <button className={this.state.subscriberId ? "show" : "hidden"} className={this.state.subscriberId ? "show" : "hidden"} onClick={this.stopWatching}>Stop Watching</button>
+                    <button className={this.state.publisherId ? "hidden" : "show"} onClick={this.stream}>Stream</button>
+                    <button className={this.state.publisherId ? "show" : "hidden"} onClick={this.stopStreaming}>Stop Streaming</button>
                 </div>
 
                 <CodeMirror

@@ -1,8 +1,7 @@
 @import './reset.css';
-@import '../node_modules/codemirror/lib/codemirror.css';
-@import '../node_modules/codemirror/theme/mdn-like.css';
+@import '../../node_modules/codemirror/lib/codemirror.css';
+@import '../../node_modules/codemirror/theme/mdn-like.css';
 
-/* #273b44 */
 :root {
   --primary: #183654;
   --primary-dark: #11263b;
@@ -16,7 +15,7 @@
 
 @font-face {
   font-family: 'Do Hyeon';
-  src: url('/fonts/DoHyeon.ttf');
+  src: url('../fonts/DoHyeon-Regular.ttf');
 }  
 
 html {
@@ -138,7 +137,7 @@ button:hover {
 }
 
 .arena {
-  height: 89vh;
+  height: 88vh;
   flex: 6
 }
 
@@ -212,6 +211,14 @@ button:hover {
 
 .chat-container ul li div {
   margin: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: initial;
 }
 
 .chat-container ul li span {
