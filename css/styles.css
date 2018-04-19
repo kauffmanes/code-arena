@@ -1,6 +1,5 @@
 @import './reset.css';
 @import '../node_modules/codemirror/lib/codemirror.css';
-/* @import '../node_modules/codemirror/theme/erlang-dark.css'; */
 @import '../node_modules/codemirror/theme/mdn-like.css';
 
 /* #273b44 */
@@ -9,11 +8,16 @@
   --primary-dark: #11263b;
   --primary-light: #ddd;
   --secondary-dark: #4fa5a2;
-  --primary-text: color: #383838;
+  --primary-text: #383838;
   --classic: rgba(0,0,0,.1);
   --primary-accent: #4891da;
   --secondary-accent: #c0ccd8;
 }
+
+@font-face {
+  font-family: 'Do Hyeon';
+  src: url('/fonts/DoHyeon.ttf');
+}  
 
 html {
   box-sizing: border-box;

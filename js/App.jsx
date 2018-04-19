@@ -6,6 +6,9 @@ import Landing from './Landing';
 import Header from './Header';
 import FourOhFour from './404';
 
+//css
+import styles from '../css/styles.css';
+
 class App extends React.Component {
 
     constructor() {
