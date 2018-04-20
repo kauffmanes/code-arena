@@ -4,13 +4,13 @@ const config = {
     context: __dirname,
     entry: './js/App.jsx',
     devServer: {
-        publicPath: '/public/',
+        publicPath: '/dist/',
         historyApiFallback: true
     },
     devtool: 'cheap-eval-source-map',
     output: {
-        path: path.join(__dirname, 'public'),
-        filename: 'bundle.js'
+        path: path.join(__dirname, 'dist'),
+        filename: 'codearena.bundle.js'
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json']

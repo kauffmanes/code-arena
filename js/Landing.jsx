@@ -159,12 +159,16 @@ class Arena extends React.Component {
 
     stopStreaming() {
         clearInterval(this.state.publisherId);
-        this.state.publisherId = null;
+        this.setState({
+            publisherId: null
+        });
     }
 
     stopWatching() {
         clearInterval(this.state.subscriberId);
-        this.state.subscriberId = null;
+        this.setState({
+            subscriberId: null
+        });
     }
 
     render() {

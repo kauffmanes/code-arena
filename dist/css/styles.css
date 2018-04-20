@@ -1,6 +1,6 @@
 @import './reset.css';
-@import '../../node_modules/codemirror/lib/codemirror.css';
-@import '../../node_modules/codemirror/theme/mdn-like.css';
+@import './codemirror.css';
+@import './mdn-like.css';
 
 :root {
   --primary: #183654;
